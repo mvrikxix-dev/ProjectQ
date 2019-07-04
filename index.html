@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="font/fontawesome-free-5.9.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>mvrikxix | ProjectQ</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="page-banner">
+                <h1 class="title">ProjectQ</h1>
+                <p>Project Manager for Ninjas</p>
+                <form id="add-branch">
+                    <input type="text" placeholder="Branch Name">
+                    <button id="add-branch">Add</button>
+                </form>
+            </div>
+        </header>
+        <section>
+            
+        </section>
+        <div id="project-list">
+            <form autocomplete="off" id="add-project">
+                <input id="project-name" type="text" placeholder="Project Name" required>
+                <input id="project-desc" type="textarea" placeholder="Description" required>
+                <button id="add" type="button" onclick="addProject()"><i class="fas fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
