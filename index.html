@@ -15,16 +15,18 @@
             <div id="page-banner">
                 <h1 class="title">Project<span id="Q">Q</span></h1>
                 <p>Project Manager for Ninjas</p>
-                <form id="add-branch">
+                <form autocomplete="off" id="add-branch">
                     <input id="add-name" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Branch Name'" placeholder="Branch Name">
                     <button type="button" id="add-button" onclick="addBranch()"><i class="fas fa-plus"></i></button>
                 </form>
             </div>
         </header>
         <section id="branch-list">
+<!--
             <button class="branch-select">
                 Branch<span class='cancel'><i class="fas fa-times"></i></span>
             </button>
+-->
         </section>
         <div id="project-list">
             <form autocomplete="off" id="add-project">

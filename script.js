@@ -23,6 +23,37 @@ function addProject(){
     projectList.appendChild(projectCard);
 }
 
+function addBranch(){
+    var branchName = document.getElementById('add-name').value;
+    
+    const branchButton = document.createElement('button');
+    const branchSpan = document.createElement('span');
+    const cancelButton = document.createElement('i');
+    
+    branchButton.setAttribute('class', 'branch-select');
+    branchSpan.setAttribute('class', 'cancel');
+    cancelButton.setAttribute('class', 'fas fa-times');
+    
+    branchButton.textContent = branchName;
+    
+    branchButton.appendChild(branchSpan);
+    branchSpan.appendChild(cancelButton);
+    
+    document.getElementById('add-name').value= "";
+    
+    const branchList = document.getElementById('branch-list');
+    branchList.appendChild(branchButton);
+}
 
-//    document.getElementById("project-card").style.display="block";
-//    document.getElementById("project-name").value="";
+var list =  document.querySelector('#branch-list');
+
+list.addEventListener('click', function(e){
+    if(e.target.className == 'fas fa-times'){
+        const li = e.target.parentElement.parentElement;
+        list.removeChild(li);
+    }else if(e.target.className == 'cancel'){
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
+});
+
