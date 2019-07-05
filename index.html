@@ -22,16 +22,25 @@
             </div>
         </header>
         <section id="branch-list">
-<!--
+            <!--
             <button class="branch-select">
                 Branch<span class='cancel'><i class="fas fa-times"></i></span>
             </button>
 -->
         </section>
+        <div id="readonly-container">
+            <div class="readonly-data">
+                <p class="readonly-name">ProjectQ</p>
+                <button class="readonly-git" onclick="location.href='https://github.com/mvrikxix-dev/ProjectQ'" type="button"><i class="fab fa-github"></i></button>    
+                <p class="readonly-id">#19204</p>
+                <span class="delete"><i class="far fa-trash-alt"></i></span>
+            </div>
+        </div>
         <div id="project-list">
             <form autocomplete="off" id="add-project">
-                <input id="project-name" type="text" placeholder="Project Name" required>
-                <input id="project-desc" type="textarea" placeholder="Description" required>
+                <span class="label">Add Project</span>
+                <input id="project-name" class="project-box" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Project Name'" placeholder="Project Name" required>
+                <input id="project-desc" class="project-box" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Repository Link'" placeholder="Repository Link" required>
                 <button id="add" type="button" onclick="addProject()"><i class="fas fa-plus"></i></button>
             </form>
         </div>

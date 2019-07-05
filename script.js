@@ -1,26 +1,40 @@
 function addProject(){
-    var projectName = document.getElementById("project-name").value;
-    var projectDesc = document.getElementById("project-desc").value;
+    const projectName = document.getElementById('project-name').value;
+    const projectDesc = document.getElementById('project-desc').value;
     
-    const projectList = document.getElementById('project-list');
-    const projectCard = document.createElement('form');
-    const nameCard = document.createElement('input');
-    const descCard = document.createElement('input');
-    const idCard = document.createElement('input');
+    const viewCard = document.createElement('div'); 
+    const nameCard = document.createElement('p');
+    const gitCard = document.createElement('button');
+    const iconCard = document.createElement('i');
+    const idCard = document.createElement('p');
+    const deleteCard = document.createElement('button');
+    const delIconCard = document.createElement('i');
     
-    projectCard.setAttribute('class', 'project-card');
-    nameCard.setAttribute('id', 'card-name');
-    nameCard.setAttribute('readonly');
-    descCard.setAttribute('id', 'card-desc');
-    idCard.setAttribute('id', 'card-id');
+    viewCard.appendChild(nameCard);
+    viewCard.appendChild(gitCard);
+    gitCard.appendChild(iconCard);
+    viewCard.appendChild(idCard);
+    viewCard.appendChild(deleteCard);
+    deleteCard.appendChild(delIconCard);
     
-    projectCard.appendChild(nameCard);
-    projectCard.appendChild(descCard);
-    projectCard.appendChild(idCard);
-        
-//    document.getElementById("card-name").value = projectName;
+    viewCard.setAttribute('class', 'readonly-data');
+    nameCard.setAttribute('class', 'readonly-name');
+    gitCard.setAttribute('class', 'readonly-git');
+    iconCard.setAttribute('class', 'fab fa-github');
+    idCard.setAttribute('class', 'readonly-id');
+    deleteCard.setAttribute('class', 'delete');
+    delIconCard.setAttribute('class', 'far fa-trash-alt');
     
-    projectList.appendChild(projectCard);
+    var rand = parseInt(100000*Math.random());
+    
+    nameCard.innerHTML = projectName;
+    idCard.innerHTML = "#" + rand;
+    
+    const readonlyContainer = document.getElementById('readonly-container');
+    readonlyContainer.appendChild(viewCard);
+    
+    document.getElementById('project-name').value="";
+    document.getElementById('project-desc').value="";
 }
 
 function addBranch(){
@@ -49,11 +63,21 @@ var list =  document.querySelector('#branch-list');
 
 list.addEventListener('click', function(e){
     if(e.target.className == 'fas fa-times'){
+        console.log(e.target);
         const li = e.target.parentElement.parentElement;
         list.removeChild(li);
     }else if(e.target.className == 'cancel'){
         const li = e.target.parentElement;
         list.removeChild(li);
     }
+});
+
+var container= document.querySelector('#readonly-container');
+    
+container.addEventListener('click', function(con){
+    if(con.target.className == 'far fa-trash-alt'){
+            const x = con.target.parentElement.parentElement;
+            container.removeChild(x);
+        }
 });
 
