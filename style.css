@@ -113,18 +113,22 @@ html, body{
 }
 
 section{
-    height: 53px;
+    position: relative;
+    top: -10px;
+    height: 70px;
     overflow: hidden;
-    background-color: rgba(0,0,0,0.009);
+    background-color: rgba(235,235,235,1);
+    border-radius: 15px 15px 0 0;
 }
 
 #branch-list .branch-select{
     position: relative;
     border: 0;
+    padding-right: 10px;
     height: 40px;
-    margin: 6px;
+    margin: 8px 0 0 8px;
     margin-right: 0;
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.95);
     font-family: 'Hind Madurai', sans-serif;
     font-weight: 900;
     line-height: 40px;
@@ -132,7 +136,7 @@ section{
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: skyblue;
+    background-color: rgba(0,0,0,0.58);
     outline: none;
 }
 
@@ -141,20 +145,23 @@ section{
     color: rgba(255,255,255,0.9);
 }
 
+.branch-text{
+    padding-right: 10px;
+}
+
 .cancel{
     position: relative;
     left: 1px;
-    padding-left: 10px;
     width: 0;
     height: 0;
-    color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.3);
     background-color: transparent;
     font-size: 15px;
     outline: none;
 }
 .cancel:hover{
     cursor: pointer;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.8);
 }
 
 .cancel:active{
@@ -222,9 +229,10 @@ section{
     left:50%;
     outline: 0;
     transform: translate(-50%);
-    border-bottom: 1px solid rgba(0,0,0,0.19);
-    border-left: 1px solid rgba(0,0,0,0.19);
-    border-right: 1px solid rgba(0,0,0,0.19);
+}
+
+#add:disabled{
+    background-color: gainsboro;
 }
 
 button:before{
@@ -299,8 +307,9 @@ button:before{
 
 .delete{
     position: absolute;
+    padding: 6px 0 0 6px;
     top: 16px;
-    left: 666px;
+    left: 658px;
     border: 0;
     color: rgba(0,0,0,0.5);
     font-size: 25px;

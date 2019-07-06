@@ -1,6 +1,9 @@
 function addProject(){
-    const projectName = document.getElementById('project-name').value;
+    const projectName = document.getElementById('project-name').value; 
     const projectDesc = document.getElementById('project-desc').value;
+    
+    const gitLink = 'window.open' + '(' + "'" + projectDesc + "'" + ',' + "'" + '_blank' + "'" + ')';
+    console.log(gitLink);
     
     const viewCard = document.createElement('div'); 
     const nameCard = document.createElement('p');
@@ -24,7 +27,9 @@ function addProject(){
     idCard.setAttribute('class', 'readonly-id');
     deleteCard.setAttribute('class', 'delete');
     delIconCard.setAttribute('class', 'far fa-trash-alt');
-    
+    gitCard.setAttribute('onclick', gitLink);
+    gitCard.setAttribute('target', '_blank');
+
     var rand = parseInt(100000*Math.random());
     
     nameCard.innerHTML = projectName;
@@ -43,13 +48,16 @@ function addBranch(){
     const branchButton = document.createElement('button');
     const branchSpan = document.createElement('span');
     const cancelButton = document.createElement('i');
+    const branchText = document.createElement('span');
     
     branchButton.setAttribute('class', 'branch-select');
     branchSpan.setAttribute('class', 'cancel');
     cancelButton.setAttribute('class', 'fas fa-times');
+    branchText.setAttribute('class', 'branch-text');
     
-    branchButton.textContent = branchName;
+    branchText.textContent=branchName;
     
+    branchButton.appendChild(branchText);
     branchButton.appendChild(branchSpan);
     branchSpan.appendChild(cancelButton);
     
