@@ -112,7 +112,7 @@ html, body{
     background-color: deepskyblue;
 }
 
-section{
+#branch-list{
     position: relative;
     top: -10px;
     height: 70px;
@@ -138,6 +138,10 @@ section{
     padding-right: 10px;
     background-color: rgba(0,0,0,0.58);
     outline: none;
+}
+
+#branch-list .branch-select:hover{
+    cursor: pointer;
 }
 
 #branch-list .branch-select:focus{
@@ -166,6 +170,14 @@ section{
 
 .cancel:active{
     color: rgba(0,0,0,0.4);
+}
+
+#project-container{
+    padding: 15px;
+    position: relative;
+    top: -24px;
+    border-radius: 15px 15px 0 0;
+    background-color: white;
 }
 
 #project-list{
@@ -247,12 +259,17 @@ button:before{
 }
 
 #readonly-container{
-/*   background-color: aquamarine;*/
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 770px;
+    max-height: 308px;
+    overflow-y: auto;
 }
 
 .readonly-data{
     position: relative;
-    margin-top: 10px;
+    margin-bottom: 10px;
     left:50%;
     transform: translate(-50%);
     width: 650px;
@@ -292,7 +309,7 @@ button:before{
     cursor: pointer;
 }
 
-.readonly-git:focus{
+.readonly-git:active{
     background-color: rgba(0,0,0,0.85)
 }
 
@@ -325,4 +342,13 @@ button:before{
 
 .delete:active{
     color: crimson;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
