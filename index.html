@@ -17,9 +17,10 @@
             <div id="page-banner">
                 <h1 class="title">Project<span id="Q">Q</span></h1>
                 <p>Project Manager for Ninjas</p>
-                <form autocomplete="off" id="add-branch">
-                    <input id="add-name" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Branch Name'" placeholder="Branch Name">
-                    <button type="button" id="add-button" onclick="addBranch()"><i class="fas fa-plus"></i></button>
+                <form autocomplete="off" id="search-container">
+                    <input id="search-name" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Branch Name'" placeholder="Search Project">
+                    <button type="button" id="search-button" onclick="search()"><i class="fas fa-search"></i></button>
+                    <button type="button" id="exit-button" onclick="exitSearch()"><i class="fas fa-times"></i></button>
                 </form>
             </div>
         </header>
@@ -31,14 +32,37 @@
         </section>
         
         <section id="project-container">
+            <div id="not-found">
+                <p class="not-icon"><i class="fas fa-code"></i></p>
+                <p class="not-title">Project not found</p>
+            </div>
             <div id="readonly-container">
                 <div class="readonly-data">
                     <p class="readonly-name">ProjectQ</p>
-                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>    
+                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>  
                     <p class="readonly-id">#19204</p>
                     <span class="delete"><i class="far fa-trash-alt"></i></span>
                 </div>
+                <div class="readonly-data">
+                    <p class="readonly-name">ProjectN</p>
+                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>  
+                    <p class="readonly-id">#16736</p>
+                    <span class="delete"><i class="far fa-trash-alt"></i></span>
+                </div>
+                <div class="readonly-data">
+                    <p class="readonly-name">ProjectZ</p>
+                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>  
+                    <p class="readonly-id">#18263</p>
+                    <span class="delete"><i class="far fa-trash-alt"></i></span>
+                </div>
+                <div class="readonly-data">
+                    <p class="readonly-name">ProjectM</p>
+                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>  
+                    <p class="readonly-id">#17352</p>
+                    <span class="delete"><i class="far fa-trash-alt"></i></span>
+                </div>
             </div>
+            
             <div id="project-list">
                 <form autocomplete="off" id="add-project">
                     <span class="label">Add Project</span>

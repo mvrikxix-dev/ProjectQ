@@ -1,9 +1,60 @@
+function exitSearch(){
+    const exitBtn = document.getElementById('exit-button');
+    const searchBtn = document.getElementById('search-button');
+    const searchItem = document.querySelectorAll('.readonly-name');
+    
+    document.getElementById('project-list').style.display="block";
+
+    Array.from(searchItem).forEach(function(search){
+        search.parentElement.style.display="block";
+    });
+    
+    exitBtn.addEventListener('click', function(){
+       searchBtn.style.display="block"; 
+       exitBtn.style.display="none";
+    });
+    
+    document.getElementById('not-found').style.display="none";
+    document.getElementById('search-name').value="";
+}
+
+function search(){
+    const exitBtn = document.getElementById('exit-button');
+    const searchBtn = document.getElementById('search-button');
+    
+    searchBtn.addEventListener('click', function(){
+       searchBtn.style.display="none"; 
+       exitBtn.style.display="block";       
+    });
+    
+    const searchValue = document.getElementById('search-name').value;
+    const searchItem = document.querySelectorAll('.readonly-name');
+    
+    document.getElementById('project-list').style.display="none";
+    
+    Array.from(searchItem).forEach(function(search){
+        if(search.textContent === searchValue){
+            console.log(search.textContent);
+            console.log(searchValue);
+            console.log("true");
+            search.parentElement.style.display="";
+        }else{
+            search.parentElement.style.display="none";
+            document.getElementById('not-found').style.display="block";
+        }
+    });
+    
+    document.getElementById('search-name').value="";
+    console.log(searchItem);
+        
+}
+
+
 function addProject(){
     const projectName = document.getElementById('project-name').value; 
     const projectDesc = document.getElementById('project-desc').value;
     
     const gitLink = 'window.open' + '(' + "'" + projectDesc + "'" + ',' + "'" + '_blank' + "'" + ')';
-    console.log(gitLink);
     
     const viewCard = document.createElement('div'); 
     const nameCard = document.createElement('p');
