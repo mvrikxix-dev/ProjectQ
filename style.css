@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     outline: none;
     margin: 0;
     border: 0;
@@ -7,7 +8,7 @@ html, body{
     overflow: hidden;
 }
 
-#wrapper{
+#wrapper {
     outline: none;
     background-color: white;
     position: absolute;
@@ -18,12 +19,12 @@ html, body{
     width: 850px;
     height: 850px;
     border-radius: 6px;
-    box-shadow: 0 0px 6px 0px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.3);
     transform: translate(-50%, -50%);
 }
 
-#page-banner{
-    background-color: rgba(0,0,0,0.04);
+#page-banner {
+    background-color: rgba(0, 0, 0, 0.04);
     margin: 0;
     padding: 0;
     width: 850px;
@@ -31,36 +32,36 @@ html, body{
     border-radius: 6px 6px 0 0;
 }
 
-#page-banner .title{
+#page-banner .title {
     font-family: 'Questrial', sans-serif;
     position: absolute;
     top: 3.4%;
     left: 50%;
     outline: none;
     font-size: 38px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
     transform: translate(-50%, 20%);
-    
+
 }
 
-#page-banner .title #Q{
+#page-banner .title #Q {
     font-family: 'Questrial', sans-serif;
     color: deepskyblue;
 }
 
-#page-banner p{
+#page-banner p {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     top: 12.5%;
     left: 50%;
     font-size: 17px;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     outline: none;
     transform: translate(-50%, -50%);
     font-weight: 900;
 }
 
-#search-container{
+#search-container {
     position: absolute;
     width: 450px;
     background-color: azure;
@@ -69,7 +70,7 @@ html, body{
     transform: translate(-50%, -50%);
 }
 
-#search-name{
+#search-name {
     position: absolute;
     width: 400px;
     height: 38px;
@@ -83,14 +84,14 @@ html, body{
     padding-top: 3px;
 }
 
-#search-name::placeholder{
+#search-name::placeholder {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    color: rgba(0,0,0,0.2);
+    color: rgba(0, 0, 0, 0.2);
     line-height: 30px;
 }
 
-#search-button{
+#search-button {
     position: absolute;
     top: 1px;
     right: 9px;
@@ -105,16 +106,16 @@ html, body{
     background-color: lightskyblue;
 }
 
-#search-button:hover{
+#search-button:hover {
     background-color: skyblue;
     cursor: pointer;
 }
 
-#search-button:active{
+#search-button:active {
     background-color: deepskyblue;
 }
 
-#exit-button{
+#exit-button {
     position: absolute;
     top: 1px;
     right: 9px;
@@ -130,85 +131,105 @@ html, body{
     z-index: -1;
 }
 
-#exit-button:hover{
+#exit-button:hover {
     background-color: #ed6969;
     cursor: pointer;
 }
 
-#exit-button:active{
+#exit-button:active {
     background-color: #eb5252;
 }
 
-#branch-list{
+#branch-list {
     position: relative;
-    padding-left: 5px;
-    top: -10px;
-    height: 70px;
-    overflow: hidden;
-    background-color: rgba(235,235,235,1);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 0;
+    top: -14px;
+    height: 60px;
+    overflow-y: ;
+    background-color: rgba(235, 235, 235, 1);
     border-radius: 15px 15px 0 0;
 }
 
-#branch-list .branch-select{
+.button-container {
+    display: inline-block;
+    height: 40px;
+    
+}
+
+.branch-select {
     position: relative;
     border: 0;
-    padding-right: 10px;
     height: 40px;
-    margin: 8px 0 0 8px;
-    margin-right: 0;
-    color: rgba(255,255,255,0.95);
+    margin-right: -3px;
+    color: rgba(255, 255, 255, 0.95);
     font-family: 'Hind Madurai', sans-serif;
     font-weight: 900;
     line-height: 40px;
     font-size: 16px;
     border-radius: 10px;
     padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(0,0,0,0.58);
+    padding-right: 21px;
+    background-color: skyblue;
     outline: none;
 }
 
-#branch-list .branch-select:hover{
+.branch-select:hover {
+    background-color: deepskyblue;
     cursor: pointer;
 }
 
-#branch-list .branch-select:focus{
-    background-color: deepskyblue;
-    color: rgba(255,255,255,0.9);
+.branch-select:focus {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.58);
+    top: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
-.branch-text{
+.branch-select:focus > .branch-text {
+    position: relative;
+    top: -2px;
+}
+
+.branch-select:focus + .cancel {
+    position: relative;
+    top: 9px;
+}
+
+.branch-text {
     padding-right: 10px;
 }
 
-.cancel{
+.branch-select + .cancel {
     position: relative;
-    left: 1px;
+    right: 16px;
     width: 0;
     height: 0;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.15);
     background-color: transparent;
     font-size: 15px;
     outline: none;
 }
-.cancel:hover{
+
+.cancel:hover {
     cursor: pointer;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.3);
 }
 
-.cancel:active{
-    color: rgba(0,0,0,0.4);
+.cancel:active {
+    color: rgba(0, 0, 0, 0.4);
 }
 
-#project-container{
+#project-container {
     padding: 30px;
     position: relative;
     top: -24px;
-    border-radius: 15px 15px 0 0;
+    /*    border-radius: 15px 15px 0 0;*/
     background-color: white;
 }
 
-#not-found{
+#not-found {
     display: none;
     height: 270px;
     width: 500px;
@@ -219,107 +240,141 @@ html, body{
     transform: translate(-50%);
 }
 
-.not-icon{
+.not-icon {
     font-size: 100px;
     position: absolute;
     top: -50px;
     left: 50%;
     transform: translate(-50%);
-    color: rgba(0,0,0,0.09);
+    color: rgba(0, 0, 0, 0.09);
 }
 
-.not-title{
+.not-title {
     font-family: 'Questrial', sans-serif;
     width: 500px;
     font-size: 32px;
-    color: rgba(0,0,0,0.09);
+    color: rgba(0, 0, 0, 0.09);
     position: absolute;
     font-weight: 900;
-    top: 140px;
+    top: 145px;
     left: 50%;
     text-align: center;
     transform: translate(-50%);
 }
 
-#project-list{
+#project-list {
     position: relative;
     top: 15px;
     left: 50%;
     width: 650px;
     height: 140px;
     border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     transform: translate(-50%);
-} 
-
-.label{
-    position: absolute;
-    top: -22px;
-    left: 16%;
-    transform: translate(-50%);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
-    font-weight: 900;
-    color: rgba(0,0,0,0.3);
-        
 }
 
-#add-project{
-    width: 550px;
+.branch-box {
     position: absolute;
-    top: 50%;
+    top: 9px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%);
+/*    background-color: beige;*/
+    height: 50px;
+    width: 365px;
 }
 
-#add-project .project-box{
-    position: relative;
-    top: 15px;
+.branch-name {
+    position: absolute;
+    top: 8px;
+    left: 25px;
     width: 240px;
-    border: 1px solid rgba(0,0,0,0.19);
+    border: 1px solid rgba(0, 0, 0, 0.19);
     height: 30px;
     text-indent: 10px;
     margin-left: 20px;
 }
 
-#add-project .project-box::placeholder{
+.branch-button {
+    position: absolute;
+    top: 8px;
+    left: 286px;
+    height: 34px;
+    width: 34px;
+    border: 0;
+    color: white;
+    background-color: rgba(0,0,0,0.65);
+    outline: 0;
     font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(0,0,0,0.4);
+    border-radius: 0 4px 4px 0;
 }
 
-#add-project #add{
+.branch-button:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.branch-button:active{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.branch-name::placeholder {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#add-project {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#add-project .project-box {
+    position: relative;
+    top: -33px;
+    width: 240px;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    height: 30px;
+    text-indent: 10px;
+    margin-left: 20px;
+}
+
+#add-project .project-box::placeholder {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#add-project #add {
     position: absolute;
     border: 0;
     color: white;
-    background-color: skyblue;
+    background-color: deepskyblue;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     font-size: 20px;
     line-height: 1;
     top: 65px;
-    left:50%;
+    left: 50%;
     outline: 0;
     transform: translate(-50%);
 }
 
-#add:disabled{
-    background-color: gainsboro;
-}
-
-button:before{
-    width:100px;
+button:before {
+    width: 100px;
     height: 100px;
     background-color: blue;
 }
 
-#add-project #add:hover{
+#add-project #add:hover {
     cursor: pointer;
     background-color: deepskyblue;
 }
 
-#readonly-container{
+#readonly-container {
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -328,36 +383,36 @@ button:before{
     overflow-y: auto;
 }
 
-.readonly-data{
+.readonly-data {
     position: relative;
     margin-bottom: 10px;
-    left:50%;
+    left: 50%;
     transform: translate(-50%);
     width: 650px;
     height: 65px;
     border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.readonly-name{
+.readonly-name {
     position: relative;
     top: -4px;
     left: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 23px;
-    color: rgba(0,0,0,0.65);
+    color: rgba(0, 0, 0, 0.65);
 }
 
-.readonly-git{
+.readonly-git {
     position: absolute;
     border: 0;
     top: -1px;
     right: 0px;
     width: 67px;
     height: 67px;
-    background-color: rgba(0,0,0,0.7);
-    border-radius: 0 10px 10px 0;    
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0 10px 10px 0;
     text-align: center;
     line-height: 1;
     color: white;
@@ -365,16 +420,16 @@ button:before{
     outline: 0;
 }
 
-.readonly-git:hover{
-    background-color: rgba(0,0,0,0.75);
+.readonly-git:hover {
+    background-color: rgba(0, 0, 0, 0.75);
     cursor: pointer;
 }
 
-.readonly-git:active{
-    background-color: rgba(0,0,0,0.85)
+.readonly-git:active {
+    background-color: rgba(0, 0, 0, 0.85)
 }
 
-.readonly-id{
+.readonly-id {
     font-family: 'Montserrat', sans-serif;
     color: skyblue;
     font-weight: 900;
@@ -383,33 +438,33 @@ button:before{
     right: 90px;
 }
 
-.delete{
+.delete {
     position: absolute;
     padding: 6px 0 0 6px;
     top: 16px;
     left: 658px;
     border: 0;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     font-size: 25px;
     background-color: transparent;
     outline: 0;
-    
+
 }
 
-.delete:hover{
+.delete:hover {
     color: lightcoral;
     cursor: pointer;
 }
 
-.delete:active{
-    color: crimson;
+.delete:active {
+    color: #eb5252;
 }
 
-::-webkit-scrollbar{
-    width: 4px;
+::-webkit-scrollbar {
+    width: 3px;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: rgba(0,0,0,0.1);
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
