@@ -5,68 +5,24 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="font/fontawesome-free-5.9.0-web/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Hind+Madurai|Montserrat|Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>mvrikxix | ProjectQ</title>
 </head>
 
 <body>
-
-    <div id="wrapper">
-
-        <header>
-            <div id="page-banner">
-                <h1 class="title">Project<span id="Q">Q</span></h1>
-                <p>Project Manager for Ninjas</p>
-                <form autocomplete="off" id="search-container">
-                    <input id="search-name" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Search Project'" placeholder="Search Project">
-                    <button type="button" id="search-button" onclick="search()"><i class="fas fa-search"></i></button>
-                    <button type="button" id="exit-button" onclick="exitSearch()"><i class="fas fa-times"></i></button>
-                </form>
-            </div>
-        </header>
-
-        <section id="branch-list">
-<!--
-            <div class="button-container">
-                <button class="branch-select">
-                    <span class="branch-text">ProjectQ</span>
-                </button>
-                <span class='cancel'><i class="fas fa-times"></i></span>
-            </div>
--->
-        </section>
-
-        <section id="project-container">
-            <div id="not-found">
-                <p class="not-icon"><i class="fas fa-code"></i></p>
-                <p class="not-title">Project not found</p>
-            </div>
-            <div id="readonly-container">
-                <div class="readonly-data">
-                    <p class="readonly-name">ProjectQ</p>
-                    <button class="readonly-git" onclick="window.open('https://github.com/mvrikxix-dev/ProjectQ', '_blank')" type="button"><i class="fab fa-github"></i></button>
-                    <p class="readonly-id">#19204</p>
-                    <span class="delete"><i class="far fa-trash-alt"></i></span>
-                </div>
-            </div>
-
-            <div id="project-list">
-                <form autocomplete="off" id="add-project">
-                    <div class="branch-box">
-                        <input id="add-name" class="branch-name" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Branch Name'" placeholder="Branch Name" required>
-                        <button class="branch-button" type="button" onclick="addBranch()"><i class="fas fa-code-branch"></i></button>
-                    </div>
-                    <input id="project-name" class="project-box" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Project Name'" placeholder="Project Name" required>
-                    <input id="project-desc" class="project-box" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Repository Link'" placeholder="Repository Link" required>
-                    <button id="add" type="button" onclick="addProject()"><i class="fas fa-plus"></i></button>
-                </form>
-            </div>
-        </section>
-
+    <header>
+        <div id="header-name">Project<span class="Q">Q</span></div>
+    </header>
+    <div id="landing-image">
+        <img src="img/landing-page.png">
     </div>
-
-    <script src="script.js"></script>
-
+    <section id="text-content">
+        <div id="content-header">
+            <h1 id="header-text"><span id="project">Project</span><span class="Q">Q</span> lets you work more collaboratively and get more done.</h1>
+        </div>
+        <p id="content-text">ProjectQ’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
+        <button class="start">Get Started</button>
+    </section>
+    <script src="javascript/index.js"></script>
 </body>
-
-</html>
