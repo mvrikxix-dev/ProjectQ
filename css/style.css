@@ -105,15 +105,6 @@ body {
     background-color: lightskyblue;
 }
 
-#search-button:hover {
-    background-color: skyblue;
-    cursor: pointer;
-}
-
-#search-button:active {
-    background-color: deepskyblue;
-}
-
 #exit-button {
     position: absolute;
     top: 1px;

@@ -1,98 +1,55 @@
 body {
     margin: 0;
-    padding: 0;
     overflow: hidden;
 }
 
-#landing-image {
+#left {
     position: absolute;
-    bottom: -40px;
-    left: 1px;
-    width: 65%;
-    height: 95%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #20232A;
+    min-width: 50%;
     outline: none;
+    z-index: -1;
 }
 
-#landing-image img {
+#right {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2B2F38;
+    min-width: 50%;
+    outline: none;
+    z-index: -1;
 }
 
-#header-name {
-    font-family: 'Questrial', sans-serif !important;
+#name {
+    padding-top: 230px;
     position: absolute;
-    top: 25px;
-    left: 90px;
-    color: #3F3D56;
-    font-size: 35px;
-    font-weight: 900;
-    z-index: 1;
-    font-family: sans-serif;
+    left: 47%;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#name h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    color: rgba(32, 35, 42, 0.5);
+    font-size: 455px;
+    font-weight: bolder;
+    line-height: -0;
 }
 
 .Q {
-    color: deepskyblue;
-}
-
-#text-content {
-    position: absolute;
-    top: 240px;
-    right: 10.5%;
-    max-width: 550px;
-}
-
-#content-header {
-    width: 580px;
-}
-
-#header-text {
-    font-family: sans-serif;
-    font-size: 50px;
-    color: #3F3D56;
-    font-weight: 900;
-    line-height: 1.09
-}
-
-#content-text {
-    position: relative;
-    top: -30px;
-    font-family: sans-serif;
-    font-size: 21px;
-    color: rgba(0, 0, 0, 0.65);
-}
-
-.start {
-    font-family: 'Questrial', sans-serif;
-    position: absolute;
-    bottom: -15px;
-    left: 2px;
-    border: 0;
-    width: 160px;
-    height: 50px;
-    border-radius: 50px;
-    color: rgba(0, 191, 255, 1);
-    font-size: 22px;
-    border: 1.5px solid rgba(0, 191, 255, 0.8);
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-}
-
-.start:hover {
-    background-color: rgba(0, 191, 255, 0.8);
-    color: white;
-    border: 0;
-    outline: none;
-    animation: pulse .5s;
-}
-
-.start:active {
-    color: white;
-    border: 0;
-    background-color: rgba(0, 191, 255, 1);
-    outline: none;
+    margin: 0;
+    color: rgba(255,99,71,0.9) !important;
+    z-index: -1;
+    font-size: 555px;
 }

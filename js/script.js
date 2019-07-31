@@ -3,7 +3,7 @@ const searchBox = document.getElementById('search-name');
 const projectBox = document.getElementById('project-add');
 const list = document.getElementById('readonly-container');
 
-searchBox.onclick = function () {
+searchBox.onkeypress = function () {
     projectBox.style.display = "none";
     searchBtn.children[0].setAttribute('class', 'fas fa-times');
     searchBtn.setAttribute('id', 'exit-button');
@@ -46,43 +46,49 @@ function addProject() {
     const projectName = document.getElementById('project-name').value;
     const projectDesc = document.getElementById('project-desc').value;
 
-    const gitLink = 'window.open' + '(' + "'" + projectDesc + "'" + ',' + "'" + '_blank' + "'" + ')';
+    if (projectName == "") {
+        alert("Project Name is mandatory");
+    } else if (projectDesc == "") {
+        alert("Repository Link is mandatory");
+    } else {
+        const gitLink = 'window.open' + '(' + "'" + projectDesc + "'" + ',' + "'" + '_blank' + "'" + ')';
 
-    const viewCard = document.createElement('li');
-    const nameCard = document.createElement('p');
-    const gitCard = document.createElement('button');
-    const iconCard = document.createElement('i');
-    const idCard = document.createElement('p');
-    const deleteCard = document.createElement('button');
-    const delIconCard = document.createElement('i');
+        const viewCard = document.createElement('li');
+        const nameCard = document.createElement('p');
+        const gitCard = document.createElement('button');
+        const iconCard = document.createElement('i');
+        const idCard = document.createElement('p');
+        const deleteCard = document.createElement('button');
+        const delIconCard = document.createElement('i');
 
-    viewCard.appendChild(nameCard);
-    viewCard.appendChild(gitCard);
-    gitCard.appendChild(iconCard);
-    viewCard.appendChild(idCard);
-    viewCard.appendChild(deleteCard);
-    deleteCard.appendChild(delIconCard);
+        viewCard.appendChild(nameCard);
+        viewCard.appendChild(gitCard);
+        gitCard.appendChild(iconCard);
+        viewCard.appendChild(idCard);
+        viewCard.appendChild(deleteCard);
+        deleteCard.appendChild(delIconCard);
 
-    viewCard.setAttribute('class', 'readonly-data');
-    nameCard.setAttribute('class', 'readonly-name');
-    gitCard.setAttribute('class', 'readonly-git');
-    iconCard.setAttribute('class', 'fab fa-github');
-    idCard.setAttribute('class', 'readonly-id');
-    deleteCard.setAttribute('class', 'delete');
-    delIconCard.setAttribute('class', 'far fa-trash-alt');
-    gitCard.setAttribute('onclick', gitLink);
-    gitCard.setAttribute('target', '_blank');
+        viewCard.setAttribute('class', 'readonly-data');
+        nameCard.setAttribute('class', 'readonly-name');
+        gitCard.setAttribute('class', 'readonly-git');
+        iconCard.setAttribute('class', 'fab fa-github');
+        idCard.setAttribute('class', 'readonly-id');
+        deleteCard.setAttribute('class', 'delete');
+        delIconCard.setAttribute('class', 'far fa-trash-alt');
+        gitCard.setAttribute('onclick', gitLink);
+        gitCard.setAttribute('target', '_blank');
 
-    var rand = parseInt(100000 * Math.random());
+        var rand = parseInt(100000 * Math.random());
 
-    nameCard.innerHTML = projectName;
-    idCard.innerHTML = "#" + rand;
+        nameCard.innerHTML = projectName;
+        idCard.innerHTML = "#" + rand;
 
-    const readonlyContainer = document.getElementById('readonly-container');
-    readonlyContainer.appendChild(viewCard);
+        const readonlyContainer = document.getElementById('readonly-container');
+        readonlyContainer.appendChild(viewCard);
+        document.getElementById('project-name').value = "";
+        document.getElementById('project-desc').value = "";
+    }
 
-    document.getElementById('project-name').value = "";
-    document.getElementById('project-desc').value = "";
 }
 
 var container = document.querySelector('#readonly-container');
